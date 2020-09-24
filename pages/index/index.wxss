@@ -1,0 +1,23 @@
+page{
+  background-color: #f7f7f7
+}
+.items{
+  width: 295rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+  margin-bottom:80rpx;
+  background: #fff
+}
+.cri{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 10rpx 0 10rpx 10rpx;
+  margin: auto;
+  margin-top: -35rpx;
+  box-shadow: 4rpx 4rpx 4rpx 4rpx rgba(104, 135, 225, 0.2)
+}
+.bg{
+  width: 750rpx;
+  height: 280rpx;
+  display: block
+}
