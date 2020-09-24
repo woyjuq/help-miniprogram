@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/order/order",
+    "pages/mine/mine",
+    "pages/mine/info/info",
+    "pages/mine/address/address",
+    "pages/area/area",
+    "pages/login/login",
+    "pages/payment/payment",
+    "pages/other/other",
+    "pages/daiqu/daiqu",
+    "pages/dayin/dayin",
+    "pages/dayin/dy/dy",
+    "pages/banzu/banzu",
+    "pages/order/detail/detail",
+    "pages/register/register",
+    "pages/mine/addressinfo/addressinfo",
+    "pages/mine/chooseaddress/chooseaddress",
+    "pages/mine/cash/cash",
+    "pages/mine/jdsm/jdsm",
+    "pages/mine/about/about",
+    "pages/richtext/richtext"
+  ],
+  "window":{ 
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "荆楚帮帮",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "#6887e1",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "img/t1.png",
+      "selectedIconPath": "img/t2.png"
+    },
+    {
+      "pagePath": "pages/banzu/banzu",
+      "text": "去帮忙",
+      "iconPath": "img/t7.png",
+      "selectedIconPath": "img/t8.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "img/t5.png",
+      "selectedIconPath": "img/t6.png"
+    }]
+  }
+}
