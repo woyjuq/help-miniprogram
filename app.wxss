@@ -61,7 +61,7 @@
   color: #fff;
   font-size: 30rpx;
   border-radius: 100rpx;
-  background: linear-gradient(to right top,#6183dd,#6e42d3);
+  background: linear-gradient(to right top,#ff6500,#ff6500);
   margin-top: 80rpx;
 }
 .btns:active{

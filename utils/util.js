@@ -1,6 +1,6 @@
 const util = {
-  API: 'http://localhost:3336/api/', 
-  webSrc: 'http://localhost:8080/dist/#/dayin_wx',
+  API: 'http://woyjuq.top:3336/api/', 
+  webSrc: 'http://woyjuq.top:3336/dist/#/dayin_wx',
 
   /**
    * 获取窗口大小
