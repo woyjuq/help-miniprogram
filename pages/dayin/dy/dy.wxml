@@ -1,0 +1,8 @@
+<form bindsubmit="formSubmit" report-submit="true">
+<view class='pa-t30 pa-b10'>
+  <view class='fo-28 bold'>上传打印文件:</view>
+  <view class='tuu panel-center item-center fo-g fo-50' style='background-image:url({{cert}})' data-name='cert' bindtap='choose'> + </view>
+</view>
+
+<button class='btns ' form-type="submit">提交</button>
+</form>
