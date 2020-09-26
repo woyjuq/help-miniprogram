@@ -1,0 +1,47 @@
+.dk{
+  background: linear-gradient(to top,#fff,#45c6ff);
+  min-height: 200rpx
+}
+.fgh{
+  width: 190rpx;
+  height: 80rpx;
+  border: 1px solid #e1e1e1;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 30rpx;
+  color: #888
+}
+.fgh2{
+  width: 190rpx;
+  height: 80rpx;
+  border: 1px solid #ff6633;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 30rpx;
+  color: #ff6633
+}
+
+.bz{
+  padding: 30rpx;
+  box-shadow: 0 0 10rpx 6rpx rgba(0, 0, 0, 0.07);
+  border-radius: 10rpx;
+  margin-top: 80rpx
+}
+.avatar{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 130rpx;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+  top: -100rpx;
+  border: 6rpx solid #FFCC66;
+  background-color: #FFCC66
+}
+
+.fo-b{
+  margin-top: 50rpx;
+  color: #6699CC
+}
