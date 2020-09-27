@@ -1,0 +1,64 @@
+page {
+  background: linear-gradient(to top,#6183dd,#6e42d3);
+  font-size: 32rpx;
+}
+
+.container {
+  padding: 0 60rpx;
+}
+.bgg{
+  font-size: 30rpx;
+  text-align: center;
+  width: 100%;
+  line-height: 90rpx;
+  height: 90rpx;
+  background: rgba(255, 255, 255, 0.8)
+}
+.panels{
+  padding: 30rpx;
+  background-color: rgba(255, 255, 255, 0.3)
+}
+.wechatapp {
+  padding: 80rpx 0 48rpx;
+  margin-bottom: 72rpx;
+  text-align: center;
+}
+
+.wechatapp .header {
+  width: 190rpx;
+  height: 190rpx;
+  border: 2px solid #fff;
+  margin: 0rpx auto 0;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 1px 0px 5px rgba(50, 50, 50, 0.3);
+}
+
+.auth-title {
+  color: #585858;
+  font-size: 40rpx;
+  margin-bottom: 40rpx;
+}
+
+.auth-subtitle {
+  color: #888;
+  margin-bottom: 88rpx;
+}
+
+.login-btn {
+  border: none;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #04be01;
+  color: #fff;
+  font-size: 11pt;
+  border-radius: 999rpx;
+}
+
+.login-btn::after {
+  display: none;
+}
+
+.login-btn.button-hover {
+  box-shadow: inset 0 5rpx 30rpx rgba(0, 0, 0, 0.15);
+}
