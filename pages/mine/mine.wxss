@@ -1,0 +1,22 @@
+.vb{
+  padding: 30rpx;
+  
+}
+.avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 130rpx;
+  overflow: hidden;
+  margin: auto;
+  border: 6rpx solid #ffffff;
+}
+page{
+  background: #f3f3f3
+}
+.btn-1{
+  background: #ffffff;
+  height: 150rpx;
+  width: 330rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx 0 #e1e1e1  
+}
