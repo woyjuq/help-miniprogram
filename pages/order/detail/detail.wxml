@@ -1,0 +1,66 @@
+<view style="height:150rpx">
+  <view style='background-image:url({{list.avatar_url}})' class='bggs'></view>
+</view>
+<view class='pa-l30 pa-r30 ' style='position:relative;' >
+  <view class='panel ra-10 shadow'>
+    <view class="panel-between">
+      <view class='panel-start item-center'>
+        <image class='avatar' src='{{list.avatar_url}}' mode='aspectFill'></image>
+        <view class='ma-l30'>
+          <view class='fo-36 bold '>{{list.title}}</view>
+          <view class='fo-26 fo-g'>{{list.nick_name}} | {{list.create_time}}</view>
+        </view>
+      </view>
+      <view class='state {{list.state== 0 ?"ste4":list.state== 1 ? "ste1":list.state== 2 ? "ste2":list.state == 3?"ste3":"ste5"}}'>{{list.state ==0?'待付款':list.state ==1 ? '需要帮助':list.state ==2?'已帮助':list.state ==3?"已完成":"已取消"}}</view>
+    </view>
+    <view class='w-20 border-b ma-t30'></view>
+    <view class='fo-30 ma-t30'>{{list.des}}</view>
+    <view class='fo-26 ma-t30 fo-g' wx:if="{{list.qi != '' && list.qi != 'undefined' && list.qi != null}}">起点：{{list.qi}}</view>
+    <view class='fo-26 ma-t30 fo-g'>目的地：{{list.mu}}</view>
+    <view class='state ste4 ma-t30'>赏金￥{{list.total_fee}}</view>
+    <view class='panel-end' style='height:30rpx'>
+      <view class='cri2 panel-center item-center' style='background-color:rgb(51, 153, 255);box-shadow: 0 0 10rpx 0 rgb(51, 153, 255)' wx:if="{{list.dphone}}" data-type='dphone' bindtap='makePhoneCall'>
+        <view class='text-center'>
+          <image src='/img/pjh.png' class='icon-30'></image>
+          <view class='fo-20 fo-w'>短号</view>
+        </view>
+      </view>
+      <view class='cri2 panel-center item-center' wx:if="{{list.phone}}" data-type='phone' bindtap='makePhoneCall'>
+        <view class='text-center'>
+          <image src='/img/pjh.png' class='icon-30'></image>
+          <view class='fo-20 fo-w'>手机号</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='panel-center item-center ma-t30'>
+  <view class='border-b ' style='width:50rpx'></view>
+  <view class='fo-30 ma-l30 ma-r30 fo-g'>{{list.jd_id ? '接单人':'暂无接单人'}}</view>
+  <view class='border-b ' style='width:50rpx'></view>
+</view>
+
+<view class='pa-30 ' wx:if="{{list.jd_id}}">
+  <view class='panel ra-10 shadow'>
+    <view class='panel-between item-center'>
+      <view class='panel-start item-center'>
+        <image src='{{jduser.avatar_url}}' mode='aspectFill' style="width:80rpx;height:80rpx;border-radius:100rpx;background: #e1e1e1"></image>
+        <view class='fo-28 bold ma-l30'>{{jduser.nick_name}}</view>
+      </view>
+      <view class='panel-end item-center'>
+        <view class='tagsd1' data-type='dphone' bindtap='makePhoneCall2'>拨打短号</view>
+        <view class='tagsd2' data-type='phone' bindtap='makePhoneCall2'>拨打手机号</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='fix-b panel-end itme-center'>
+  <view class='bzbtn ' wx:if="{{list.state == 1 && list.wx_id != wx_id}}" bindtap='takeIt'>帮助TA</view>
+  <view class='bzbtn3 ' wx:if="{{(list.state == 1 || list.state == 0) && list.wx_id == wx_id}}" data-id='{{list.id}}' bindtap='cancel'>取消</view>
+  <view class='bzbtn2 ' wx:if="{{list.state == 0 && wx_id == list.wx_id}}" data-title='{{list.title}}' data-id='{{list.id}}' data-price='{{list.total_fee}}' bindtap='pay'>立即付款</view>
+  <view class='bzbtn4 ma-l30' wx:if="{{list.state == 2 && wx_id == list.wx_id}}"  data-id='{{list.id}}'  bindtap='comfirm'>确认完成</view>
+</view>
+
+<view class='pa-30 fo-30 fo-g' wx:if="{{list.is_pay == 1}}">订单编号：{{list.order_num}}</view>
