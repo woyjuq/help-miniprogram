@@ -1,0 +1,43 @@
+
+<view class='pa-30'>
+
+  <view class='bz'>
+    <view style='height:60rpx'>
+      <view class="avatar">
+        <open-data type="userAvatarUrl" mode="aspectFill"></open-data>
+      </view>
+    </view>
+    <form bindsubmit="formSubmit" report-submit="true">
+      <view class='fo-28 ma-t10 bold'>帮助内容(必填):</view>
+      <view class='border pa-20 ma-t20'>
+        <textarea class='fo-28' name='des' value='{{des}}' style='height:{{msg.tagsFilter.length==0?200:100}}rpx' placeholder='请输入详细的帮助信息'></textarea>
+        <view class='panel-start wrap'>
+          <view class='tags' wx:for="{{msg.tagsFilter}}" data-index='{{index}}' bindtap='tagsClick'>{{item.label}}</view>
+        </view>
+      </view>
+      <view class='panel-between border-b pa-t30 pa-b10 ' wx:if="{{title == '校园跑腿'}}">
+        <view class='fo-28 bold'>取货地点(必填):</view>
+        <input class='text-right fo-28'  name='qi'  placeholder='输入取货地点'></input>
+      </view>
+      <view class='pa-t30 pa-b30 panel-between item-center border-b' data-path='/pages/mine/address/address?choose=1' bindtap='navTo'>
+          <view class='fo-30'>帮助地点(必选)</view>
+          <view class='panel-end item-center'>
+            <view class='fo-30 fo-g'>{{address ? address:'请选择地址'}}</view>
+            <image src='/img/right.png' class='icon-30 ma-l20'></image>
+          </view>
+        </view>
+      <view class='panel-between border-b pa-t30 pa-b10'>
+        <view class='fo-28 bold'>赏金(必填):</view>
+        <input class='text-right fo-28' type='digit' name='price' value="{{price}}" placeholder='输入金额(元)'></input>
+      </view>
+      <view class='fo-26 text-center fo-g ma-t30' wx:if="{{msg.des}}">{{msg.des}}</view>
+      <button class='btns ' form-type="submit">立即发布帮助</button>
+    </form>
+    
+  </view>
+  <!-- <view class='panel-center item-center'>
+    <view class='fo-28 fo-b text-center '>费用参考</view>
+    <view class='fo-28 fo-b text-center ma-l30'>代理商入口</view>
+  </view> -->
+
+</view>
